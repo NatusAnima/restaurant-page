@@ -1,0 +1,93 @@
+/* styles.css */
+
+/* GENERIC STUFF: FONT, REMOVING BODY MARGIN (WHITE GAPS), CENTERING IMAGES AND GIVING THEM DEFAULT SIZE */
+body {
+  margin: 0;
+}
+
+img {
+  height: 25px;
+  justify-self: center;
+}
+
+a,
+a :link,
+a :hover,
+a :active,
+a :visited{
+  text-decoration: none;
+  color: white;
+}
+
+body {
+    background-color: grey
+  }
+  
+header {
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto;
+
+}
+
+nav {
+  
+  height: fit-content;
+  background-color:black;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button */
+.nav-button {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #f0f0f0;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.nav-button:active {
+  background: var(--color);
+  color: #fff;
+}
+/**/
+
+#content{
+  background-color: black;
+  color: white;
+  margin: 7vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+}
